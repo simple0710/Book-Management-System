@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+#search_place {
+	justify-content: center;
+	align-items: center;
+	float: right;
+}
+
+#main_page {
+	width: 90%;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	align-content: center;
+	text-align: center;
+}
+
+#main_table {
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 0;
+	justify-content: center;
+	text-align: center;
+	z-index: -1;
+}
+
+.move_btn {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	float: right;
+	background-color: transparent;
+	border: 0.5px solid black;
+	height: 20px;
+	align-content: center;
+}
+
+table {
+	height: auto;
+	justify-content: space-between;
+	table-layout: fixed;
+}
+
+strong {
+	margin-bottom: 5px;
+	align-content: center;
+	float: left;
+}
+
+thead {
+	background-color: gray;
+}
+
+th, td {
+	border: 1px solid black;
+	height: 30px;
+	word-break: break-all;
+}
+
+tr>td {
+	height: 30px;
+}
+
+td>input, td>select {
+	height: 30px;
+	width: 95%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 15px;
+	align-content: center;
+}
+
+td>p {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#search_place {
+	width: 300px;
+	margin-bottom: 8px;
+	text-align: center;
+	display: flex;
+}
+
+h1 {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	margin: 8px;
+	padding: 0;
+}
+
+nav {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+li.icon {
+	flex-basis: 25%;
+}
+
+header {
+	background: cadetblue;
+	padding: 20px;
+}
+
+nav>ul>li>a {
+	display: block;
+	text-align: center;
+	margin: 4px;
+	padding: 8px 16px;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	background: teal;
+}
+
+a:hover {
+	background: yellowgreen;
+}

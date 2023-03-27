@@ -1,0 +1,80 @@
+@charset "EUC-KR";
+/* li {
+  list-style: none;
+} */
+.slide_wrapper {
+	position: relative;
+	/* width: 660px; */
+/*  	width: 720px; */ 
+
+ 	width: 65%;
+ 	min-width: 480px;
+ 	max-width: 820px;
+	margin: 0 auto;
+	height: 200px;
+	overflow: hidden;
+}
+
+img {
+	width: 140px;
+	height: 200px;
+	-webkit-user-drag: none;
+}
+
+.slides {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.slides.animated {
+	transition: 0.5s ease-out;
+}
+
+.slides li {
+	width: 140px;
+	height: 200px;
+	float: left;
+}
+
+.slides li:not(:last-child) {
+	/* margin-right: 30px; */
+	margin-right:30px;
+}
+
+.controls {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.controls span {
+	background: #333;
+	color: #fff;
+	padding: 10px 20px;
+	margin: 0 10px;
+}
+
+.slide_button {
+	/* layout */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* position */
+	position: absolute;
+	/* 버튼이 중앙에 위치하게 하기위해 계산 */
+	top: calc(50% - 16px);
+	/* size */
+	width: 32px;
+	height: 32px;
+	/* style */
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+.prev {
+	left: 0;
+}
+
+.next {
+	right: 0;
+}

@@ -1,0 +1,5 @@
+@charset "EUC-KR";
+
+tbody td:nth-child(1) {
+	background-color:#E2E2E2;
+}

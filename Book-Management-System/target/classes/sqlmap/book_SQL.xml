@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="book">
+	<insert id="insert" parameterType="hashMap"
+		useGeneratedKeys="true" keyProperty="book_id">  
+    <![CDATA[
+	    insert into book
+	    (title, category, price, nation, genre)
+	    values
+	    (#{title}, #{category}, #{price}, #{nation}, #{genre})
+    ]]>
+	</insert>
+	<select id="select_detail" parameterType="hashMap"
+		resultType="hashMap">
+    <![CDATA[
+        select
+        title,
+        category,
+        price,
+        insert_date,
+        nation,
+        genre
+        from
+        book
+        where
+        book_id = #{bookId}
+    ]]>
+	</select>
+	<update id="update" parameterType="hashMap">  
+	<![CDATA[
+		update book set
+		title = #{title},
+		category = #{category},
+		price = #{price},
+		nation = #{nation},
+		genre = #{genre}
+		where
+		book_id = #{bookId}
+	]]>
+	</update>
+	<delete id="delete" parameterType="hashMap">  
+	<![CDATA[
+		delete from book
+		where
+		book_id = #{bookId}
+	]]>
+	</delete>
+	<select id="select_list" parameterType="hashMap"
+		resultType="hashMap">  
+	<![CDATA[  
+		select
+		book_id,
+		title,
+		category,
+		price,
+		nation,
+		genre,
+		insert_date
+		from
+		book
+		where 1 = 1
+	]]>
+		<if test="keyword != null and keyword != ''">
+			<choose>
+				<when test="category_select == 'title'">
+					and (title like CONCAT('%', #{keyword}, '%'))
+				</when>
+				<when test="category_select == 'category'">
+					and (category like CONCAT('%', #{keyword}, '%'))
+				</when>
+				<when test="category_select == 'genre'">
+					and (genre like CONCAT('%', #{keyword}, '%'))
+				</when>
+			</choose>
+		</if>
+		order by insert_date desc
+	</select>
+</mapper>

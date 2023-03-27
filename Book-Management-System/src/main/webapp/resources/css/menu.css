@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+nav {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+header {
+	background: cadetblue;
+	padding: 20px;
+}
+
+nav>ul>li>a {
+	display: block;
+	text-align: center;
+	margin: 4px;
+	padding: 8px 16px;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	background: teal;
+}
+
+a:hover {
+	background: yellowgreen;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.menu_wrap .dep1 {
+	/* 간격 없애기 */
+	/* font-size: 0; */
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	z-index: 1;
+	position: relative;
+}
+
+.menu_wrap .dep1>li {
+	display: inline-block;
+	width: 120px;
+	vertical-align: top;
+	background: #ddd;
+	text-align: center;
+	font-size: 16px;
+}
+
+.menu_wrap .dep1>li:hover>a {
+	background: purple;
+	color: white;
+}
+
+.menu_wrap .dep1>li:hover>.dep2 {
+	display: block;
+	z-index: 1;
+}
+
+.menu_wrap .dep1>li>a {
+	display: block;
+	padding: 10px 0;
+}
+
+.menu_wrap .dep2 {
+	display: none;
+	background: rgb(40, 151, 148);
+}
+
+.menu_wrap .dep2 a {
+	display: block;
+	padding: 10px 0;
+}
+
+.menu_wrap .dep2 a:hover {
+	text-decoration: underline;
+}
