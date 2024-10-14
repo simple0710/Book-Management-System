@@ -57,7 +57,7 @@
    1. 입력
         - 책 생성 화면과 입력은 동일하며, 저장 버튼을 누르는 경우 데이터 베이스에 변경된 값으로 저장된다.
 
-## 🔍 **시스템 아키텍처**
+## 🔍 **기술 스택**
 ![시스템 아키텍처](https://github.com/simple0710/Book-Management-System/blob/main/image/BookManageMentService_skill_stack.png)
 
 ## 🔚 **프로젝트 결과**
